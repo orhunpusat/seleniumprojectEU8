@@ -22,7 +22,7 @@ public class T5_checkboxes {
         WebElement checkbox2 = driver.findElement(By.xpath("//input[@name='checkbox2']"));
 
         //2. Confirm checkbox #1 is NOT selected by default
-        System.out.println("checkbox1.isSelected(), expecting true = " + checkbox1.isSelected());
+        System.out.println("checkbox1.isSelected(), expecting false = " + checkbox1.isSelected());
 
         //3. Confirm checkbox #2 is SELECTED by default.
         System.out.println("checkbox2.isSelected(), expecting true = " + checkbox2.isSelected());
