@@ -66,9 +66,13 @@ public class T5_Windows_Practice {
         Assert.assertEquals(actualTitle, expextedTitleAfterClick);
 
         System.out.println("Title after click= " + actualTitle);
+
+        //If we want to go back to main page we can use already stored main handle
+        //driver.switchTo().window(mainHandle);
     }
     @AfterMethod
     public void tearDown(){
-        driver.close();
+       // driver.close(); -->only close last one
+        driver.quit(); //close both of them
     }
 }
