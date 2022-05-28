@@ -29,10 +29,10 @@ public class T3_CRM_LOGIN {
         //3. Enter valid username
         Thread.sleep(2000);
         WebElement inputUsername = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
-        inputUsername.sendKeys("Helpdesk1@cybertekschool.com");
+        inputUsername.sendKeys("helpdesk1@cybertekschool.com");
 
-        //Helpdesk1@cybertekschool.com UserUser
-        //Helpdesk2@cybertekschool.com UserUser
+        //helpdesk1@cybertekschool.com UserUser
+        //helpdesk2@cybertekschool.com UserUser
 
         //4. Enter valid password
         Thread.sleep(2000);
@@ -42,6 +42,20 @@ public class T3_CRM_LOGIN {
         //5. Click to `Log In` button
         WebElement loginButton = driver.findElement(By.xpath("//input[@value='Log In']"));
         loginButton.click();
+
+        //6. Verify title is as expected:
+        //Expected: Portal
+        BrowserUtils.verifyTitle(driver,"Portal");
+    }
+
+    @Test
+    public void crm_login_test_2() throws InterruptedException {
+
+        //1. Create new test and make set ups
+        //2. Go to : https://login1.nextbasecrm.com/
+        driver.get("https://login1.nextbasecrm.com/");
+
+
 
         //6. Verify title is as expected:
         //Expected: Portal
