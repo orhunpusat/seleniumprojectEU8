@@ -27,8 +27,12 @@ public class Driver {
      */
     public static WebDriver getDriver(){
         if (driver==null){
-            String browserType = ConfigurationReader.getProperty("browser");//We read our browserType from configuration.properties.
-                            //This way we can control which browser is opened from outside our code from configuration.properties.
+                //We read our browserType from configuration.properties.
+                //This way we can control which browser is opened from outside our code from configuration.properties.
+            String browserType = ConfigurationReader.getProperty("browser");
+
+                /*Depending on the browserType that will be return from configuration.properties file switch statement will determine
+            the case, and open the matching browser.*/
             switch (browserType){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
