@@ -1,5 +1,6 @@
 package com.cydeo.tests.upload_actions_jsexecuter;
 
+import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import org.testng.annotations.Test;
 
@@ -11,7 +12,8 @@ public class T1_Registration_Form {
     public void registration_form_test(){
         //1. Open browser
         //2. Go to website: https://practice.cydeo.com/registration_form
-        Driver.getDriver().get();
+        //Driver.getDriver() -->driver.get(url)
+        Driver.getDriver().get(ConfigurationReader.getProperty("registration.form.url"));
         //3. Enter first name
         //4. Enter last name
         //5. Enter username
