@@ -32,7 +32,7 @@ public class T1_Registration_Form {
         //inputUserName.sendKeys(faker.name().username().replaceAll("."));
         WebElement inputUserName = Driver.getDriver().findElement(By.xpath("//input[@name='username']"));
 
-        String user = (faker.bothify("helpdesk###");
+        String user = (faker.bothify("helpdesk###"));
         inputUserName.sendKeys(user);
 
         //6. Enter email address
