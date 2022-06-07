@@ -31,7 +31,22 @@ public class ActionsPractices {
         //5- Scroll back up to “Home” link using PageUP button
         actions.sendKeys(Keys.PAGE_UP,Keys.PAGE_UP).perform();
 
-
-
+        //Driver.getDriver().quit(); // quit all driver so does not open second tests browser
+        Driver.closeDriver();
+    }
+    @Test
+    public void test2(){
+        Driver.getDriver().get("https://practice.cydeo.com/");
+        Driver.closeDriver();
+    }
+    @Test
+    public void test3(){
+        Driver.getDriver().get("https://practice.cydeo.com/");
+        Driver.closeDriver();
+    }
+    @Test
+    public void test4(){
+        Driver.getDriver().get("https://practice.cydeo.com/");
+        Driver.closeDriver();
     }
 }
