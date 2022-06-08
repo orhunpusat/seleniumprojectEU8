@@ -28,7 +28,9 @@ public class T7_Scroll_JSExecuter {
 
         //4- Scroll up to “Home” link
         BrowserUtils.sleep(2);
-        js.executeScript("arguments[0].scrollIntoView(true)", cydeoLink, homeLink);
+        //js.executeScript("arguments[1].scrollIntoView(true)", cydeoLink, homeLink);
+        js.executeScript("arguments[0].scrollIntoView(true)",homeLink);
+
 
         //objects
         //cydeoLink 0
