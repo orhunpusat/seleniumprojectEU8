@@ -17,11 +17,20 @@ public class DynmicLoad1Page {
     @FindBy(css = "div#loading")
     public WebElement loadingBar;
 
+    //@FindBy(id = "username")
     @FindBy(css = "#username")
     public WebElement inputUsername;
 
     @FindBy(css = "#pwd")
     public WebElement inputPassword;
+
+    @FindBy(xpath = "//button[.='Submit']")
+    public WebElement submitButton;
+
+    @FindBy(css = "flash")
+    public WebElement errorMesage;
+
+
 
 
 }
