@@ -9,6 +9,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 public class ExplicitPractices {
 
     DynamicControlsPage dynamicControlsPage;
@@ -29,8 +31,10 @@ public class ExplicitPractices {
         dynamicControlsPage.removeButton.click();
 
         //4- Wait until “loading bar disappears”
+        Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
         wait.until(ExpectedConditions.invisibilityOf(dynamicControlsPage.loadingBar));
+
 
         //5- Verify:
         //a. Checkbox is not displayed
