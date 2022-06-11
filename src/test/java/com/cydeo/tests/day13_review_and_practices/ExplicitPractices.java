@@ -64,7 +64,13 @@ public class ExplicitPractices {
 
         //5- Verify:
         //a. Input box is enabled.
+        Assert.assertTrue(dynamicControlsPage.inputBox.isDisplayed());
+
         //b. “It’s enabled!” message is displayed
+        Assert.assertTrue(dynamicControlsPage.message.isDisplayed());
+
+        //Check the String value is matching as expected: "It's enabled"
+        Assert.assertTrue(dynamicControlsPage.message.getText().equals("It's enabled"));
     }
 
 }
