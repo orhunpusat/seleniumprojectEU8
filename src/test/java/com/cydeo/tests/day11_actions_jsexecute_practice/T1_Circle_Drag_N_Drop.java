@@ -19,8 +19,8 @@ public class T1_Circle_Drag_N_Drop {
         acceptCookiesButton.click();
 
         //Locate small and big circles to be able to drag them around
-        WebElement smallCircle = Driver.getDriver().findElement(By.id("draggable"));
-        WebElement bigCircle = Driver.getDriver().findElement(By.id("droptarget"));
+        WebElement smallCircle = Driver.getDriver().findElement(By.xpath("//div[@id='draggable']"));
+        WebElement bigCircle = Driver.getDriver().findElement(By.xpath("//div[@id='droptarget']"));
 
         //2. Drag and drop the small circle to bigger circle.
         Actions actions = new Actions(Driver.getDriver());
@@ -36,7 +36,7 @@ public class T1_Circle_Drag_N_Drop {
         //-Text in big circle changed to: “You did great!”
 
         String actualBigCircleText = bigCircle.getText();
-        String expectedBigCircleText = "Try again!";
+        String expectedBigCircleText = "You did great!";
 
         Assert.assertEquals(actualBigCircleText, expectedBigCircleText);
     }
